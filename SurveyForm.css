@@ -1,0 +1,239 @@
+/* 15JUN19: NEED TO PICK A FONT FOR THIS PAGE */
+@media (max-width:425px){ /*BUILT FOR RESPONSIVE MOBILE*/
+body{
+    background-color: #6F8CA2;
+    margin:0;
+    }
+#mainContainer{
+    background-color: #FBD8A8;
+    border-radius: 20px;
+    margin: 5px 0;
+    }
+#title{
+    text-align: center;
+    line-height: 1em;
+    margin-bottom: 0;
+    margin-top: 0;
+}
+#description{
+    text-align: center;
+    margin-top: 0.5em;
+}
+#survey-form{
+    display: grid;
+    grid-template-areas: 
+    "namelabel nameinput"
+    "emaillabel emailinput"
+    "numberlabel numberinput"
+    "oilchange oilchange"
+    "oilselect1 oilselect2"
+    "services1 services2"
+    "wash1 wash2"
+    "comments comments"
+    "submit reset";
+    text-align: center;
+    grid-column-gap: 3%;
+}
+#name, #name-label, #email, #email-label, #number, #number-label{
+    margin:.7em 0.2em;
+}
+#name{
+    grid-area: nameinput;
+}
+#name-label{
+    grid-area: namelabel;
+}
+#email{
+    grid-area: emailinput;
+}
+#email-label{
+    grid-area: emaillabel;
+}
+#number{
+    grid-area: numberinput;
+    text-align: center;
+    width:35px;
+    height: 15.719px;
+    align-self: center;
+}
+#number-label{
+    grid-area: numberlabel;
+}
+#oilChange{
+    grid-area: oilchange;
+    margin: .5em 0;
+}
+#dropdown-label{
+    grid-area: oilselect1;
+    margin: .5em 0;
+}
+#dropdown{
+    grid-area: oilselect2;
+    margin: .5em 0;
+}
+#maintenance-label{
+    grid-area: services1;
+    margin: .5em 0;
+}
+#maintenance{
+    grid-area: services2;
+    text-align: left;
+    margin: .5em 0;
+}
+#wash-label{
+    grid-area: wash1;
+    margin: .5em 0;
+}
+#wash{
+    grid-area: wash2;
+    text-align: left;
+    margin: .5em 0;
+}
+textarea{
+    grid-area: comments;
+    margin: .5em 0;
+    justify-self: center;
+    width: 85%;
+}
+textarea + input{
+    /* TARGETS THE SUBMIT BUTTON */
+    grid-area: submit;
+    justify-self: center;
+    margin-left: 4em;
+
+}
+input + input{
+    /* TARGETS THE RESET BUTTON */
+    grid-area: reset;
+    justify-self: center;
+}
+
+} /*BUILT FOR RESPONSIVE MOBILE*/
+
+/* AT 1334 I HAVE FINISHED THE CSS STRUCTURE FOR MOBILE PLATFORMS, HAVEN'T ADDED ANY ACTUAL STYLING IN REGARDS TO COLOR OR FONTS BUT I HAVE STYLED THE LAYOUT OF THE SURVEY AND IS CURRENTLY BUILT FOR MOBILE PLATFORMS. MUST BUILD LAYOUT FOR DEVICES LARGER THAN MOBILE DEVICES */
+
+@media(min-width:426px){ /*THIS WIDTH IS FOR EVERYTING LARGER THAN A MOBILE PHONE (COPY AND PASTED ABOVE REALLY; GOING TO DISTINGUISH THE 2 MEDIA QUERIES BY LARGER WIDTH HAVING DIFFERENT BACKGROUND COLOR/STYLE*/
+    body{
+        background-color: #6F8CA2;
+    }
+    #mainContainer{
+        background-color: #FBD8A8;
+        border-radius: 20px;
+        margin: 3em;
+        padding: 1em;
+    }
+    #title{
+        text-align: center;
+        line-height: 1em;
+        margin-bottom: 0;
+    }
+    #description{
+        text-align: center;
+        margin-top: 0.5em;
+    }
+    #survey-form{
+        display: grid;
+        grid-template-areas: 
+        "namelabel nameinput"
+        "emaillabel emailinput"
+        "numberlabel numberinput"
+        "oilchange oilchange"
+        "oilselect1 oilselect2"
+        "services1 services2"
+        "wash1 wash2"
+        "comments comments"
+        "submit reset";
+        text-align: center;
+        grid-column-gap: 3%;
+    }
+    #name, #name-label, #email, #email-label, #number, #number-label{
+        margin:.7em 0.2em;
+    }
+    #name{
+        grid-area: nameinput;
+        max-width: 25em;
+    }
+    #name-label{
+        grid-area: namelabel;
+        text-align:right;
+    }
+    #email{
+        grid-area: emailinput;
+        max-width: 25em;
+    }
+    #email-label{
+        grid-area: emaillabel;
+        text-align:right;
+    }
+    #number{
+        grid-area: numberinput;
+        text-align: center;
+        width:45px;
+        height: 15.719px;
+        align-self: center;
+    }
+    #number-label{
+        grid-area: numberlabel;
+        text-align:right;
+    }
+    #oilChange{
+        grid-area: oilchange;
+        margin: .5em 0;
+    }
+    #dropdown-label{
+        grid-area: oilselect1;
+        margin: .5em 0;
+        text-align:right;
+    }
+    #dropdown{
+        grid-area: oilselect2;
+        margin: .5em 0;
+        max-width: 25em;
+    }
+    #maintenance-label{
+        grid-area: services1;
+        margin: .5em 0;
+        text-align:right;
+    }
+    #maintenance{
+        grid-area: services2;
+        text-align: left;
+        margin: .5em 0;
+    }
+    #wash-label{
+        grid-area: wash1;
+        margin: .5em 0;
+        text-align:right;
+    }
+    #wash{
+        grid-area: wash2;
+        text-align: left;
+        margin: .5em 0;
+    }
+    textarea{
+        grid-area: comments;
+        margin: .5em 0;
+        justify-self: center;
+        width: 45%;
+    }
+    textarea + input{
+        /* TARGETS THE SUBMIT BUTTON */
+        grid-area: submit;
+        justify-self: right;
+        margin-left: 4em;
+    
+    }
+    input + input{
+        /* TARGETS THE RESET BUTTON */
+        grid-area: reset;
+        justify-self: left;
+    }
+}
+
+/* 
+COLORS:
+TAN/YELLOW: D0A468
+LIGHTER TAN/YELLOW: FBD8A8
+DULL BLUE: 476B86
+LIGHTER DULL BLUE: 6F8CA2
+*/

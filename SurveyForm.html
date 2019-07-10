@@ -1,0 +1,92 @@
+<!-- 
+    BUILD A SURVEY FORM
+>>User Story #1: I can see a title with id="title" in H1 sized text.
+>>User Story #2: I can see a short explanation with id="description" in P sized text.
+>>User Story #3: I can see a form with id="survey-form".
+>>User Story #4: Inside the form element, I am required to enter my name in a field with id="name".
+>>User Story #5: Inside the form element, I am required to enter an email in a field with id="email".
+>>User Story #6: If I enter an email that is not formatted correctly, I will see an HTML5 validation error.
+>>User Story #7: Inside the form, I can enter a number in a field with id="number".
+>>User Story #8: If I enter non-numbers in the number input, I will see an HTML5 validation error.
+>>User Story #9: If I enter numbers outside the range of the number input, which are defined by the min and max attributes, I will see an HTML5 validation error.
+>>User Story #10: For the name, email, and number input fields inside the form I can see corresponding labels that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label".
+>>User Story #11: For the name, email, and number input fields, I can see placeholder text that gives me a description or instructions for each field.
+>>User Story #12: Inside the form element, I can select an option from a dropdown that has a corresponding id="dropdown".
+>>User Story #13: Inside the form element, I can select a field from one or more groups of radio buttons. Each group should be grouped using the name attribute.
+>>User Story #14: Inside the form element, I can select several fields from a series of checkboxes, each of which must have a value attribute.
+>>User Story #15: Inside the form element, I am presented with a textarea at the end for additional comments.
+>>User Story #16: Inside the form element, I am presented with a button with id="submit" to submit all my inputs.
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="SurveyForm.css">
+    <title>JiffyWash Survey</title>
+    <!-- THINKING ABOUT BASING THIS OFF OF LIKE A CAR WASH OR OIL CHANGE SHOP-ESQUE COMPANY AND THE SURVEY IS TO GAIN FEEDBACK ON CUSTOMER SATISFACTION AND IMPROVE THE COMPANY. (POSSIBLY GOING WITH THIS THEME) -->
+    <!-- JUST THOUGHT OF ANOTHER IDEA: A CARWASH THAT ALSO DOES JIFFYLUBE-LIKE SMALL SERVICES SUCH AS BRAKES, BATTERY CORROSION CLEANING, INSPECTION, TIRE ROTATIONS, ETC. -->
+</head>
+<body>
+    <div id="mainContainer">
+            <h1 id="title">JiffyWash</h1>
+            <p id="description">Please fill out this brief survey to help us improve our service.</p>
+            <form id="survey-form" action="#">
+        
+                <label id="name-label" for="name">First Name:</label>
+                <input id="name" type="text" name="name" placeholder="John Smith" required> <br>
+        
+                <label id="email-label" for="email">Email:</label>
+                <input id="email" type="email" placeholder="Johnsmith@email.com" required autocomplete="none"> <br>
+        
+                <label id="number-label" for="number">How would you rate your experience?</label>
+                <input  id="number" type="number" min="1" max="10" placeholder="1-10" maxlength="2" required> <br>    
+        
+                <div id="oilChange">
+                <label for="oilchange">Did you get an oil change today?</label> <br>
+                <input name="oilChoice" type="radio">Yes
+                <input name="oilChoice" type="radio">No  
+                </div>
+        
+                 <!-- THIS SELECTION BOX NEEDS TO COME IMMEDIATELY AFTER THE QUESTION ASKING WHETHER THE CUSTOMER GOT AN OIL CHANGE OR NOT. I WOULD LIKE TO MAKE IT TO WHERE IF THE USER SELECTS YES TO HAVING AN OIL CHANGE TODAY, THAT THIS BELOW SELECTION BOX APPEARS AND IF THEY SELECT NO, IT DOES NOT APPEAR. -->
+                <label for="drop-down" id="dropdown-label">Which oil did you get?</label>
+                <select name="drop-down" id="dropdown">
+                    <!-- THE DISABLED/SELECTED COMBO ALLOWED ME TO HAVE THE FIRST OPTION "SELECT AN OIL" TO NOT BE A SELECTABLE OPTION FOR THE USER AND ALSO TO ACT AS A PLACEHOLDER FOR THE SELECT BOX! :D -->
+                    <option value="" disabled selected>Select an oil</option>
+                    <option value="Not Applicable">N/A</option>
+                    <option value="Conventional Motor Oil">Conventional Motor Oil</option>
+                    <option value="High Mileage Motor Oil">High Mileage Motor Oil</option>
+                    <option value="Synthetic Motor Oil">Synthetic Motor Oil</option>
+                    <option value="Synthetic Blend Motor Oil">Synthetic Blend Motor Oil</option>
+                </select>
+        
+                <label id="maintenance-label" for="services">What services did you have done today?</label> <br>
+                <div id="maintenance"> <!-- THIS WILL BE FOR CAR MAINTENANCE -->
+                    <input name="service1" value="Brakes"  type="checkbox"> Brakes <br>
+                    <input name="service2" value="Tire Rotation"  type="checkbox"> Tire Rotation <br>
+                    <input name="service3" value="Battery Cleaning"  type="checkbox"> Battery Corrosion Cleaning <br>
+                    <input name="service4" value="Inspection"  type="checkbox"> Inspection <br>
+                    <input name="service5" value="Oil Change"  type="checkbox"> Oil Change <br>
+                </div>
+        
+                <label id="wash-label" for="services">Which wash package did you have done today?</label> <br>
+                <div id="wash"> <!-- THIS WILL BE FOR CAR WASH -->
+                    <input name="washPackage" value="Bronze"  type="radio"> None <br>
+                    <input name="washPackage" value="Bronze"  type="radio"> Bronze Package <br>
+                    <input name="washPackage" value="Silver"  type="radio"> Silver Package <br>
+                    <input name="washPackage" value="Gold"  type="radio"> Gold Package <br>
+                    <input name="washPackage" value="Platinum"  type="radio"> Platinum Package <br>
+                </div>
+               
+                <textarea name="comment" id="commentBox" cols="30" rows="10"></textarea>
+               
+                <input id="submit" type="submit">
+                <input type="reset">
+        
+            </form>
+    </div>
+
+</body>
+</html>
+<!-- ITS 1200 09JUN19. SO FAR I HAVE COMPLETED ALL OF THE HTML REQUIREMENTS PER SPECIFICATIONS. ALL THAT IS LEFT IS TO ADD IN THE CSS COMPONENT. ITS SUNDAY, I MIGHT COMPLETE MORE OR I MIGHT NOT DEPENDING ON TIME. THIS IS CURRENTLY WHERE I AM LEAVING OFF. -->
